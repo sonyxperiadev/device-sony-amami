@@ -15,5 +15,3 @@
 include device/sony/rhine/BoardConfig.mk
 
 TARGET_BOOTLOADER_BOARD_NAME := D5503
-
-BOARD_KERNEL_CMDLINE += coherent_pool=8M mem=1920M
