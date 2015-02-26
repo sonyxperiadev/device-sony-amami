@@ -21,6 +21,9 @@ $(call inherit-product, device/sony/rhine/device.mk)
 $(call inherit-product, vendor/sony/amami/amami-vendor.mk)
 $(call inherit-product-if-exists, frameworks/native/build/phone-xhdpi-2048-dalvik-heap.mk)
 
+DEVICE_PACKAGE_OVERLAYS += \
+    device/sony/amami/overlay
+
 PRODUCT_COPY_FILES += \
     device/sony/amami/rootdir/system/etc/flashled_calc_parameters.cfg:system/etc/flashled_calc_parameters.cfg \
     device/sony/amami/rootdir/system/etc/mixer_paths.xml:system/etc/mixer_paths.xml \
