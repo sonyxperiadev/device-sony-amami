@@ -42,5 +42,5 @@ PRODUCT_AAPT_PREBUILT_DPI := xhdpi hdpi
 PRODUCT_AAPT_PREF_CONFIG := xhdpi
 
 PRODUCT_PROPERTY_OVERRIDES += \
-    ro.sf.lcd_density=320
-
+    ro.sf.lcd_density=320 \
+    ro.usb.pid_suffix=1A7
