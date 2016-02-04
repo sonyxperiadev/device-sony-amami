@@ -26,10 +26,29 @@ $(call inherit-product-if-exists, vendor/google/products/gms.mk)
 DEVICE_PACKAGE_OVERLAYS += \
     device/sony/amami/overlay
 
+# Device etc
 PRODUCT_COPY_FILES += \
     device/sony/amami/rootdir/system/etc/mixer_paths.xml:system/etc/mixer_paths.xml \
     device/sony/amami/rootdir/system/etc/thermanager.xml:system/etc/thermanager.xml \
     device/sony/amami/rootdir/system/etc/sensor_def_qcomdev.conf:system/etc/sensor_def_qcomdev.conf
+
+# Device Init
+PRODUCT_PACKAGES += \
+    init.recovery.amami \
+    init.amami \
+    ueventd.amami
+
+# Lights
+PRODUCT_PACKAGES += \
+    lights.amami
+
+# Simple PowerHAL
+PRODUCT_PACKAGES += \
+    power.amami
+
+# NFC
+PRODUCT_PACKAGES += \
+    nfc.amami
 
 PRODUCT_NAME := aosp_d5503
 PRODUCT_DEVICE := amami
