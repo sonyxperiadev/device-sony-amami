@@ -55,4 +55,4 @@ PRODUCT_PROPERTY_OVERRIDES := \
 
 # Inherit from those products. Most specific first.
 $(call inherit-product, device/sony/rhine/platform.mk)
-$(call inherit-product, vendor/sony/amami/amami-vendor.mk)
+$(call inherit-product, vendor/sony/rhine-amami/amami-vendor.mk)
