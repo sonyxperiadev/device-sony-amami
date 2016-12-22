@@ -12,14 +12,17 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
+# Device path
+DEVICE_PATH := device/sony/amami
+
 DEVICE_PACKAGE_OVERLAYS += \
-    device/sony/amami/overlay
+    $(DEVICE_PATH)/overlay
 
 # Device etc
 PRODUCT_COPY_FILES := \
-    device/sony/amami/rootdir/system/etc/mixer_paths.xml:system/etc/mixer_paths.xml \
-    device/sony/amami/rootdir/system/etc/thermanager.xml:system/etc/thermanager.xml \
-    device/sony/amami/rootdir/system/etc/sensors/sensor_def_qcomdev.conf:system/etc/sensors/sensor_def_qcomdev.conf
+    $(DEVICE_PATH)/rootdir/system/etc/mixer_paths.xml:system/etc/mixer_paths.xml \
+    $(DEVICE_PATH)/rootdir/system/etc/thermanager.xml:system/etc/thermanager.xml \
+    $(DEVICE_PATH)/rootdir/system/etc/sensors/sensor_def_qcomdev.conf:system/etc/sensors/sensor_def_qcomdev.conf
 
 # Device Specific Permissions
 PRODUCT_COPY_FILES += \
